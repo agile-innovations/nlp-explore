@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <title>Topic Modeling Explorer - Alpha</title>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <script>
+          document.addEventListener("DOMContentLoaded", function(event) {
+
+              var project =    "Aim 1: Identify the histamine signaling pathway that induces heat stress hypophagia. The suppression of feed intake in response to heat stress is dependent on central nervous system histamine signaling. Histamine stimulates arginine vasopressin (AVP) through H1 receptors and encourages norepinephrine (NE) mediated vasoconstriction of the visceral vasculature through H2. We propose to individually antagonize the H1 and H2 receptors to identify the mechanism by which histamine mediates heat stress hypophagia and hyperdipsia. Additional studies in the mouse will focus on pharmacological manipulation downstream of these receptors at AVP and &alpha;-adrenergic receptors. Upon isolating the receptors and neurotransmitters through which heat stress induces hypophagia in the mouse, we will conduct studies focused on pharmacological inhibition of hypophagia in the cow. We expect these studies to pharmacologically distinguish the hypophagia and hyperdipsia of heat stress, with the goal to pharmacologically restore phagic drive while encouraging water intake.Aim 2: Identify the hormones that induce short-term hypogalactia in response to heat exposure. Only 40% of the immediate decrease in milk production is explained by hypophagia. Thus 60% of the hypogalactia can be alleviated without reversing hypophagia. In this aim, we will identify the mechanism by which heat stress induces a short-term depression of milk production. Specifically, we propose that the short-term hypogalactia of heat stress is a response to decreases in mammary blood flow, which arises as a result of central nervous system histamine signaling that drives vasoconstriction by enhancing sympathetic tone. Studies in the lactating mouse are designed to first test if hypogalactia is histamine dependent, then identify the histamine receptors involved in this pathway, and finally address the role of AVP and NE. We hypothesize that the decrease in milk production is dependent on histamine induced increases in adrenergic tone and signaling at &alpha;1-adrenoreceptors. We will conduct studies in the cow to confirm that this mechanism is conserved in the cow, while identifying pharmaceutical targets to prevent heat stress hypogalactia. Aim 3: Identify the signals that mediate heat stress depression of mammary development. Heat stress prior to parturition or early in lactation decreases mammary development resulting in hypogalactia that persists throughout lactation. We will test two possible mechanisms by which heat stress inhibits mammary development. First, heat stress increases hepatic &beta;-OH butyrate production and mammary gland &beta;-OH butyrate clearance. &Beta;-OH butyrate suppresses mitotic mammary gland development. We have developed a model that lacks hepatic &beta;-OH butyrate production and will allow us to isolate the role of this metabolite in mammary development. Second, by enhancing adrenergic tone, heat stress decreases mammary gland blood flow. We will chronically block the heat stress induced mammary artery vasoconstriction by antagonizing &alpha;1-adrenoreceptors to assess the effect of mammary blood flow on mammary development.Impact: These studies aim to identify pharmacological targets to limit production losses from heat stress. Given the large economic burden of heat stress, the expected increase in mean global temperatures, and water shortages in the Western U.S., it is imperative that we develop less water and energy intensive methods to mitigate production losses due to heat exposure."
+
+           var nlp = window.nlp_compromise;
+        //   var nlpNgram = window.nlpNgram;
+        //   nlp.plugin(nlpNgram);
+          // var t = nlp.text(project);
+        //  var pos = nlp..tags();
+        //  var sentences= nlp(project).sentences();
+          // var t1 = nlp.text(project);
+          // var l1 = nlp.text(project).sentences.length;
+          //var s1 = nlp.text(project).sentences;
+
+       //   var n = nlp(preamble.remove('#Determiner').remove('#Preposition').ngram({size:3});
+       var tags = nlp.text().tags();
+       // now loop and find all nouns
+       var sentences = nlp.text(project).sentences;
+       // now divide into sentences
+       sentences.forEach(function(sentence, index) {
+           // get parsed terms
+             terms=sentence.terms;
+              terms.forEach(function(term,index) {
+                    partOfSpeech = term.tag;
+                    debugger;
+                    if (partOfSpeech === "Verb") {
+                        tagText = term.text;
+                     var cleanText = tagText.replace(/[^\w\s]/gi, '')
+                        console.log(cleanText);
+                    }
+
+                }
+          );
+
+      }
+     );
+ //      var s = nlp.text(preamble).sentences();
+
+        //   console.log(text_only);
+           //console.log(sentences);
+          //    console.log(pos);
+           //console.log(v);
+       });
+      </script>
+     </head>
+     <body>
+         <div id = "bigrams">
+             <!-- TBD -->
+         </div>
+     </body>
+    <!-- 2016-09-24 Owen: Add NLP Functions -->
+  <script src = "nlp_compromise.js"></script>
+  <script src = "ngram.js"></script>
+  <script src="d3.v3.min.js"></script>
+  <script src="queue.v1.js"></script>
+  
+</html>
