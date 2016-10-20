@@ -19,7 +19,8 @@ var projectSummary = "Specialty crop growers rely on manual labor for fruit-pick
   var nlp = window.nlp_compromise; // initialize nlp
   var preparedText = nlp(projectSummary); // prepare the text
 
-,,,
+```
+<br/>
 
 So, what does the "preparedText" object look like?
 <br/>
