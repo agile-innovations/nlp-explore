@@ -41,10 +41,10 @@ You can see that for our sample project summary we have 10 sentences, and the fi
 
 ```
 2. Extracting "explicit" phrases in each sentence that are delimited by either:
-  - <em>Comma
-  - <em>Semicolon
-  - <em>Colon]
-  -
+  - <em>Comma</em>
+  - <em>Semicolon</em>
+  - <em>Colon</em>
+
   ``` javaScript
 
   var myPhrase = p.?
@@ -54,13 +54,13 @@ You can see that for our sample project summary we have 10 sentences, and the fi
 
 ``` javaScript
 
-var bigrams = p.?
+  var bigrams = p.?
 
 ```
 4. Extracting "implicit" phrases (i.e.. not delimited by the author) phrase types
 
   - <em>Noun phrase</em>
-  - <em>Verb phrasa</em>
+  - <em>Verb phrase</em>
   - <em>Adjective phrase</em>
 
   ``` javaScript
@@ -73,6 +73,6 @@ var bigrams = p.?
 
 ``` javaScript
 
-  var myTopics = p. ?
+  var myTopics = p.?
 
 ```
