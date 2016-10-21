@@ -55,11 +55,11 @@ You can see that for our sample project summary we have 10 sentences, and the fi
   ```
 - Extracting n-grams from each sentence?
 
-``` javaScript
+  ``` javaScript
 
-  var bigrams = p.?
+    var bigrams = p.?
 
-```
+  ```
 - Extracting "implicit" phrases (i.e.. not delimited by the author) phrase types
 
   - <em>Noun phrase</em>
@@ -74,8 +74,8 @@ You can see that for our sample project summary we have 10 sentences, and the fi
 
 - Extracting "Topics" or "Concepts"
 
-``` javaScript
+  ``` javaScript
 
-  var myTopics = p.?
+    var myTopics = p.?
 
-```
+  ```
