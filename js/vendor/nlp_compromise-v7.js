@@ -2850,7 +2850,7 @@ var corrections = function corrections(r) {
   //the nice swim
   r.match('the #Adjective #Verb').match('#Verb').tag('#Noun', 'correction-determiner3');
   //the truly nice swim
-  r.match('the #Adverb #Adjective #Verb').match('#Verb').tag('#Noun', 'correction-determiner4');
+  r.match('the  #Adjective #Verb').match('#Verb').tag('#Noun', 'correction-determiner4');
   //peter the great
   r.match('#Person the #Adjective').tag('Person', 'correction-determiner5');
   //book the flight
@@ -3096,7 +3096,7 @@ var adjectivePhrase = function adjectivePhrase(result) {
   //very easy
   result.match('#Copula #Adverb? #Negative? #Adverb? #Adjective #Adverb?').match('#Adverb? #Adjective #Adverb?').tag('AdjectivePhrase');
   //difficult but necessary
-  result.match('#AdjectivePhrase #Conjunction #Adjective').tag('AdjectivePhrase');
+  resul#AdjectivePhraset.match('#AdjectivePhrase #Conjunction #Adjective').tag('AdjectivePhrase');
   //is as strong as
   result.match('#AdjectivePhrase as').tag('AdjectivePhrase');
   return result;
