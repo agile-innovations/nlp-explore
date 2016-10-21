@@ -36,11 +36,14 @@ You can see that for our sample project summary we have 10 sentences, and the fi
 
 ##### What are the best practices for the following:
 
-1. Extracting only the sentence text for each sentence
-``` javaScript
+- Extracting only the sentence text for each sentence
 
-```
-2. Extracting "explicit" phrases in each sentence that are delimited by either:
+  ``` javaScript
+
+  var mySentences = p.?
+
+  ```
+- Extracting "explicit" phrases in each sentence that are delimited by either:
   - <em>Comma</em>
   - <em>Semicolon</em>
   - <em>Colon</em>
@@ -50,14 +53,14 @@ You can see that for our sample project summary we have 10 sentences, and the fi
   var myPhrase = p.?
 
   ```
-3. Extracting n-grams from each sentence?
+- Extracting n-grams from each sentence?
 
 ``` javaScript
 
   var bigrams = p.?
 
 ```
-4. Extracting "implicit" phrases (i.e.. not delimited by the author) phrase types
+- Extracting "implicit" phrases (i.e.. not delimited by the author) phrase types
 
   - <em>Noun phrase</em>
   - <em>Verb phrase</em>
@@ -69,7 +72,7 @@ You can see that for our sample project summary we have 10 sentences, and the fi
 
   ```
 
-5. Extracting "Topics" or "Concepts"
+- Extracting "Topics" or "Concepts"
 
 ``` javaScript
 
